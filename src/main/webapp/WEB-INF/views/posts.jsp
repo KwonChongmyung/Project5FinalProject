@@ -41,6 +41,7 @@
 
 <table id="list" width="90%">
 <tr>
+	<th>Seq</th>
 	<th>Title</th>
 	<th>Writer</th>
 	<th>Publish</th>
