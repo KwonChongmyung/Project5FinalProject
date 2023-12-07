@@ -8,14 +8,14 @@ public class BoardVO {
 	private String title;
 	private String writer;
 	private String publish;
-	private Date years;
+	private String years;
 	private String symbol;
 
 	private String category;
 
 	private String location;
 
-	private Checkbox loaned;
+	private String loaned;
 	private Date regdate;
 	private int cnt;
 	
@@ -39,8 +39,8 @@ public class BoardVO {
 	public void setPublish(String publish) {
 		this.publish = publish;
 	}
-	public Date getYears() {return years;}
-	public void setYear(Date years) {this.years = years;}
+	public String getYears() {return years;}
+	public void setYear(String years) {this.years = years;}
 	public String getSymbol() {
 		return symbol;
 	}
@@ -59,10 +59,10 @@ public class BoardVO {
 	public void setLocation(String location) {
 		this.location = location;
 	}
-	public Checkbox getLoaned() {
+	public String getLoaned() {
 		return loaned;
 	}
-	public void setLoaned(Checkbox loaned) {
+	public void setLoaned(String loaned) {
 		this.loaned = loaned;
 	}
 
