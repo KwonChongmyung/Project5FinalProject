@@ -18,7 +18,7 @@
         <tr><td>title:</td><td><input type="text" name="text" value="${u.getTitle()}"/></td></tr>
         <tr><td>writer:</td><td><input type="text" name="writer" value="${u.getWriter()}"/></td></tr>
         <tr><td>publish:</td><td><input type="text" name="publish" value="${u.getPublish()}" /></td></tr>
-        <tr><td>year:</td><td><input type="date" name="year" value="${u.getYear()}"></td></tr>
+        <tr><td>years:</td><td><input type="date" name="years" value="${u.getYears()}"></td></tr>
         <tr><td>symbol:</td><td><input type="text" name="symbol" value="${u.getSymbol()}"></td></tr>
         <tr><td>category:</td><td><input type="text" name="category" value="${u.getCategory()}"></td></tr>
         <tr><td>location:</td><td><input type="text" name="location" value="${u.getLocation()}"></td></tr>

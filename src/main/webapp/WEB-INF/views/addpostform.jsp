@@ -35,7 +35,7 @@
     <tr><td>title:</td><td><input type="text" name="title"/></td></tr>
 <tr><td>writer:</td><td><input type="text" name="writer"/></td></tr>
 <tr><td>publish:</td><td><input type="text" name="publish"/></td></tr>
-<tr><td>year:</td><td><input type="date" name="year"></td></tr>
+<tr><td>years:</td><td><input type="date" name="years"></td></tr>
     <tr><td>symbol:</td><td><input type="text" name="symbol"/></td></tr>
     <tr><td>category:</td><td><input type="text" name="category"/></td></tr>
     <tr><td>location:</td><td><input type="text" name="location"/></td></tr>

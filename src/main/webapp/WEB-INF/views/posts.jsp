@@ -59,7 +59,7 @@
 		<td>${u.getTitle()}</td>
 		<td>${u.getWriter()}</td>
 		<td>${u.getPublish()}</td>
-		<td>${u.getYear()}</td>
+		<td>${u.getYears()}</td>
 		<td>${u.getSymbol()}</td>
 		<td>${u.getCategory()}</td>
 		<td>${u.getLocation()}</td>
