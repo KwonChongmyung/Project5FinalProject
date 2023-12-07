@@ -37,15 +37,18 @@
 </script>
 </head>
 <body>
-<h1>자유게시판</h1>
+<h1>도서 목록</h1>
 
 <table id="list" width="90%">
 <tr>
-	<th>Id</th>
-	<th>Category</th>
 	<th>Title</th>
 	<th>Writer</th>
-	<th>Content</th>
+	<th>Publish</th>
+	<th>Year</th>
+	<th>Symbol</th>
+	<th>Category</th>
+	<th>Location</th>
+	<th>Loaned</th>
 	<th>Regdate</th>
 	<th>Edit</th>
 	<th>Delete</th>
@@ -53,16 +56,20 @@
 <c:forEach items="${list}" var="u">
 	<tr>
 		<td>${u.getSeq()}</td>
-		<td>${u.getCategory()}</td>
 		<td>${u.getTitle()}</td>
 		<td>${u.getWriter()}</td>
-		<td>${u.getContent()}</td>
+		<td>${u.getPublish()}</td>
+		<td>${u.getYear()}</td>
+		<td>${u.getSymbol()}</td>
+		<td>${u.getCategory()}</td>
+		<td>${u.getLocation()}</td>
+		<td>${u.getLoaned()}</td>
 		<td>${u.getRegdate()}</td>
 		<td><a href="editform/${u.getSeq()}">Edit</a></td>
 		<td><a href="javascript:delete_ok('${u.getSeq()}')">Delete</a></td>
 	</tr>
 </c:forEach>
 </table>
-<br><a href="add">add new form</a></body></br>
+<br><a href="add">add new book</a></body></br>
 </body>
 </html>
