@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
+import javax.servlet.http.HttpSession;
 @Controller
 @RequestMapping(value="/login")
 public class UserController {
@@ -17,5 +17,24 @@ public class UserController {
     @RequestMapping(value="/loginOK", method=RequestMethod.POST)
     public String loginCheck(HttpSession session, UserVO vo){
         String returnURL = "";
+        if(session.getAttribute("login") != null){
+            session.removeAttribute("login");
+        }
+        UserVO loginvo = service.getUser(vo);
+        if( loginvo != null){
+            System.out.println("login correct!");
+            session.setAttribute("login", loginvo);
+            returnURL = "redirect:/board/list";
+        }
+        else{
+            System.out.println("login error");
+            returnURL = "redirect:/login/login";
+        }
+        return returnURL;
+    }
+    @RequestMapping(value = "/logout")
+    public String logout(HttpSession session){
+        session.invalidate();
+        return "redirect:/login/login";
     }
 }
