@@ -51,7 +51,7 @@ public class BoardController {
             System.out.println("데이터 수정 실패");
         else
             System.out.println("데이터 수정 성공");
-        return "redirect:../list"; // "/board/list"로 리다이렉트
+        return "redirect:/..list"; // "/board/list"로 리다이렉트
     }
 
     @RequestMapping(value="/delete/{id}", method = RequestMethod.GET)
