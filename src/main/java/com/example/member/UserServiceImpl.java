@@ -1,4 +1,4 @@
 package com.example.member;
 
-public class MemberService {
+public class UserServiceImpl {
 }

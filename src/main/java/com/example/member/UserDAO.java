@@ -1,4 +1,15 @@
 package com.example.member;
 
+import org.apache.ibatis.session.SqlSession;
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.sql.SQLException;
+
 public class UserDAO {
+    @Autowired
+    SqlSessionTemplate sqlSession;
+    public UserVO getUser(UserVO vo){
+        return sqlSession.selectOne("User.getUser",vo);
+    }
 }
