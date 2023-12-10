@@ -14,7 +14,7 @@ public class UserController {
     public String login(){
         return "login";
     }
-    @RequestMapping(value="/loginOK", method=RequestMethod.POST)
+    @RequestMapping(value="/loginOk", method=RequestMethod.POST)
     public String loginCheck(HttpSession session, UserVO vo){
         String returnURL = "";
         if(session.getAttribute("login") != null){
