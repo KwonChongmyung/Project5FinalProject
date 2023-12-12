@@ -38,7 +38,7 @@
 </head>
 <body>
 <h1>도서 목록</h1>
-<form method ="post" action= "login/logout">
+<form method ="post" action= "../login/logout">
 	<button type = "submit">logout</button>
 </form>
 
