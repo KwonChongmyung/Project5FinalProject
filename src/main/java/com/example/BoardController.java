@@ -39,7 +39,7 @@ public class BoardController {
     public String editPost(@PathVariable("id") int id, Model model){
         System.out.println("editPost method start");
         BoardVO boardVO = boardDAO.getBoard(id);
-        model.addAttribute("boardVO", boardVO);
+        model.addAttribute("u", boardVO);
         return "editform";
     }
 
