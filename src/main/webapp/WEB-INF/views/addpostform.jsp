@@ -44,6 +44,9 @@
     <button type="button" onclick="location.href='list'">도서 목록 보기</button>
     <button type="submit">등록하기</button>
 </form>
+<form method ="post" action= "login/logout">
+    <button type = "submit">logout</button>
 
+</form>
 </body>
 </html>
