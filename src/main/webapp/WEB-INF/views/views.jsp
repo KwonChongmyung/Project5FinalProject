@@ -24,7 +24,7 @@
     <tr><td>Loaned:</td><td>${u.loaned}</td></tr>
     <tr><td>Regdate:</td><td>${u.regdate}</td></tr>
     <tr><td colspan="2">
-      <a href="<c:url value='/board/list'/>">Back to List</a>
+      <input type="button" value="back to list" onclick="history.back()"/></td></tr>
     </td></tr>
   </table>
 </form>

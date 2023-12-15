@@ -62,6 +62,7 @@
 	<th>Regdate</th>
 	<th>Edit</th>
 	<th>Delete</th>
+	<th>View</th>>
 </tr>
 <c:forEach items="${list}" var="u">
 	<tr>
