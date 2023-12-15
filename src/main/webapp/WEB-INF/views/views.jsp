@@ -28,6 +28,6 @@
     <p>Loaned : ${u.getLoaned()}</p>
   </c:if>
 </c:forEach>
-<a href="${pageContext.request.contextPath}/board/list">Back to List</a>
+<button type="button" onclick="location.href='list'">돌아가기</button>
 </body>
 </html>
