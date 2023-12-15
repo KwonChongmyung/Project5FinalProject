@@ -39,7 +39,7 @@ public class BoardVO {
 		this.publish = publish;
 	}
 	public String getYears() {return years;}
-	public void setYear(String years) {this.years = years;}
+	public void setYears(String years) {this.years = years;}
 	public String getSymbol() {
 		return symbol;
 	}
