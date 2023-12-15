@@ -35,6 +35,12 @@
 		if(a) location.href='delete/'+id;
 	}
 </script>
+	<script>
+		function view_ok(id){
+			var a = confirm("자세히 보시겠습니까?");
+			if(a) location.href='delete/'+id;
+		}
+	</script>
 </head>
 <body>
 <h1>도서 목록</h1>
@@ -71,6 +77,7 @@
 		<td>${u.getRegdate()}</td>
 		<td><a href="editform/${u.getSeq()}">Edit</a></td>
 		<td><a href="javascript:delete_ok('${u.getSeq()}')">Delete</a></td>
+		<td><a href="views/${u.getSeq()}">View</a></td>
 	</tr>
 </c:forEach>
 </table>
