@@ -61,4 +61,19 @@ public class BoardController {
             System.out.println("데이터 삭제 성공");
         return "redirect:../list"; // "/board/list"로 리다이렉트
     }
-}
+    @RequestMapping(value="/views/{id}", method = RequestMethod.GET)
+    public String viewPost(@PathVariable("id") int id, Model model) {
+        System.out.println("viewPost method start");
+        BoardVO boardVO = boardDAO.getBoard(id);
+
+        if (boardVO == null) {
+            System.out.println("해당 데이터를 찾을 수 없습니다.");
+
+            return "redirect:/board/list";
+        }
+        model.addAttribute("u", boardVO);
+        return "views";
+    }
+    }
+
+

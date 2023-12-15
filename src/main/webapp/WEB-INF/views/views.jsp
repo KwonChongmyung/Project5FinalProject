@@ -38,6 +38,6 @@
     <p>Loaned : ${u.getLoaned()}</p>
   </c:if>
 </c:forEach>
-<a href="posts.jsp">Back to List</a>
+<a href="${pageContext.request.contextPath}/board/list">Back to List</a>
 </body>
 </html>
