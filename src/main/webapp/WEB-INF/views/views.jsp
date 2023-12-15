@@ -1,33 +1,32 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: kimsoohyeong
-  Date: 12/15/23
-  Time: 7:14 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         isELIgnored="false" pageEncoding="UTF-8"%>
+<%@page import="com.example.BoardVO"%>
+<!DOCTYPE html>
 <html>
 <head>
-  <title>세부 정보</title>
-</head>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-  <title>Book Details</title>
+  <meta charset="UTF-8">
+  <title>View Form</title>
 </head>
 <body>
-<h1>Book Details</h1>
-<c:forEach items="${list}" var="u">
-  <c:if test="${u.getSeq() eq param.seq}">
-    <td>Title: ${u.getTitle()}</td>
-    <td>Writer: ${u.getWriter()}</td>
-    <td>Publish : ${u.getPublish()}</td>
-    <td>Years : ${u.getYears()}</td>
-    <td>Symbol :${u.getSymbol()}</td>
-    <td>Category :${u.getCategory()}</td>
-    <td>Location : ${u.getLocation()}</td>
-    <td>Loaned : ${u.getLoaned()}</td>
-  </c:if>
-</c:forEach>
-<button type="button" onclick="location.href='list'">돌아가기</button>
+<c:set var="id" value="${param.id}"/>
+<c:set var="u" value="${boardDAO.getBoard(id)}"/>
+<h1>세부 보기</h1>
+<form>
+  <table>
+    <tr><td>Seq:</td><td>${u.seq}</td></tr>
+    <tr><td>Title:</td><td>${u.title}</td></tr>
+    <tr><td>Writer:</td><td>${u.writer}</td></tr>
+    <tr><td>Publish:</td><td>${u.publish}</td></tr>
+    <tr><td>Years:</td><td>${u.years}</td></tr>
+    <tr><td>Symbol:</td><td>${u.symbol}</td></tr>
+    <tr><td>Category:</td><td>${u.category}</td></tr>
+    <tr><td>Location:</td><td>${u.location}</td></tr>
+    <tr><td>Loaned:</td><td>${u.loaned}</td></tr>
+    <tr><td>Regdate:</td><td>${u.regdate}</td></tr>
+    <tr><td colspan="2">
+      <a href="<c:url value='/board/list'/>">Back to List</a>
+    </td></tr>
+  </table>
+</form>
 </body>
 </html>
