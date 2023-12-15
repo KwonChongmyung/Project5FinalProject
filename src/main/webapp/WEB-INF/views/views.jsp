@@ -18,14 +18,14 @@
 <h1>Book Details</h1>
 <c:forEach items="${list}" var="u">
   <c:if test="${u.getSeq() eq param.seq}">
-    <p>Title: ${u.getTitle()}</p>
-    <p>Writer: ${u.getWriter()}</p>
-    <p>Publish : ${u.getPublish()}</p>
-    <p>Years : ${u.getYears()}</p>
-    <p>Symbol :${u.getSymbol()}</p>
-    <p>Category :${u.getCategory()}</p>
-    <p>Location : ${u.getLocation()}</p>
-    <p>Loaned : ${u.getLoaned()}</p>
+    <td>Title: ${u.getTitle()}</td>
+    <td>Writer: ${u.getWriter()}</td>
+    <td>Publish : ${u.getPublish()}</td>
+    <td>Years : ${u.getYears()}</td>
+    <td>Symbol :${u.getSymbol()}</td>
+    <td>Category :${u.getCategory()}</td>
+    <td>Location : ${u.getLocation()}</td>
+    <td>Loaned : ${u.getLoaned()}</td>
   </c:if>
 </c:forEach>
 <button type="button" onclick="location.href='list'">돌아가기</button>
